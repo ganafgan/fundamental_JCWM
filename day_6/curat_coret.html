@@ -1,0 +1,101 @@
+<html>
+    <script>
+        
+let nama_buah = ['apel', 'anggur', 'jeruk']
+
+let harga_buah =  [10000, 15000, 20000]
+
+let stock_buah = [5, 7, 8]
+
+let stock = false
+
+        pilih_user = prompt(`silahkan pilih pengguna :
+        1. Penjual
+        2. Pembeli`)
+
+do {
+    
+    apel = parseInt(prompt('Masukkan jumlah Apel'))
+
+    if(nama_buah[0] > stock_buah[0]){
+        alert('Kesalahan dalam input, stock Apel = ' +  stock_buah[0])
+        // Jika user salah dalam melakukan input quantity, akan di set true agar mengulangi proses sebelumnya (input quantity)
+        stock = true
+    } else {
+        // Jika user tidak salah dalam input quantity, set false agar menuju proses selanjutnya
+        stock = false
+    }
+
+} while (stock);
+
+do {
+
+    anggur = parseInt(prompt('Masukkan jumlah Anggur'))
+
+    if(nama_buah[1] > stock_buah[1]){
+        alert('Kesalahan dalam input, stock Anggur = ' + stock_buah[1])
+        // Jika user salah dalam melakukan input quantity, akan di set true agar mengulangi proses sebelumnya (input quantity)
+        stock = true
+    } else {
+        // Jika user tidak salah dalam input quantity, set false agar menuju proses selanjutnya
+        stock = false
+    }
+
+} while (stock);
+
+do {
+
+    jeruk = parseInt(prompt('Masukkan jumlah Jeruk'))
+
+    if(nama_buah[2] > stock_buah[2]){
+        alert('Kesalahan dalam input, stock Jeruk = ' + stock_buah[2])
+        // Jika user salah dalam melakukan input quantity, akan di set true agar mengulangi proses sebelumnya (input quantity)
+        stock = true
+    } else {
+        // Jika user tidak salah dalam input quantity, set false agar menuju proses selanjutnya
+        stock = false
+    }
+
+} while (stock);
+
+
+var total_apel = apel * harga_buah[0]
+var total_anggur = anggur * harga_buah[1]
+var total_jeruk = jeruk * harga_buah[2]
+
+var total_harga = total_apel + total_anggur + total_jeruk 
+
+alert(
+    'Detail Belanja \n\n' +
+    'Apel : ' + apel + ' x ' + harga_buah[0] + ' = ' + total_apel + '\n' +
+    'Anggur : ' + anggur + ' x ' + harga_buah[1] + ' = ' + total_anggur + '\n' +
+    'Jeruk : ' + jeruk + ' x ' + harga_buah[2] + ' = ' + total_jeruk + '\n\n'+
+    'Total : ' + total_harga
+)
+
+var moneyCondition = false
+do {
+    // Meminta input dari user berupa jumlah uang
+    var jumlah_uang = parseInt(prompt('Masukkan jumlah uang'))
+
+    var selisih = jumlah_uang - total_harga
+
+    if(jumlah_uang < total_harga){
+
+        alert('Uang yang Anda masukkan kurang ' + selisih)
+        // Akan di set true agar mengulang proses penginputan uang
+        moneyCondition = true
+
+    } else {
+        
+        alert(
+            'Terimakasih \n\n' +
+            'Uang kembali untuk Anda : ' + selisih
+        )
+        //  Akan di set false agar tidak mengulang proses input uang
+        moneyCondition = false
+    }
+
+} while (moneyCondition);
+</script>
+</html>

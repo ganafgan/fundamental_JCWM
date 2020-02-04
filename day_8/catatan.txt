@@ -1,0 +1,3 @@
+.split('') ==> mengubah string ke array
+== tipe datanya beda ttep TRUE
+=== tipe data nya beda maka FALSE

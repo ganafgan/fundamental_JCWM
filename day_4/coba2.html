@@ -1,0 +1,48 @@
+<html>
+    <script>
+
+        do{
+            var tarif_parkir_pertama = 4000 
+            var tarif_parkir_kedua = 1000
+            var jam_pertama = 3
+            var ulang = 'y'
+
+            alert('selamat datang !!!')
+            do{
+                jam_masuk = Number(prompt('Masuk Jam Berapa ???( 0 - 24 )'))
+                if(jam_masuk < 0 && jam_masuk > 24)
+                    alert('anda salah input')
+            }while(jam_masuk < 0 && jam_masuk > 24)
+            
+            do{
+                jam_keluar = Number(prompt('Keluar Jam Berapa ???( 0 - 24 )'))
+                if( jam_keluar < 0 && jam_keluar > 24 )
+                    alert('anda salah input')
+            }while( jam_keluar < 0 && jam_keluar > 24 )
+    
+            total_jam = jam_keluar - jam_masuk
+            selisih_jam = total_jam - jam_pertama
+    
+            alert(`lama anda parkir adalah ${total_jam} jam`)
+    
+            // hitung_tarif = (hitung_jam - 3) * 1000 + 4000
+            if(total_jam <= 3){
+                tarif_parkir_total = total_jam * tarif_parkir_pertama 
+            }
+    
+            else if (total_jam > 3){
+                tarif_parkir_total = (selisih_jam * tarif_parkir_kedua) + (tarif_parkir_pertama * jam_pertama)   
+            }
+    
+            // else if (hitung_jam > 3){
+            //     tarif_parkir_total = 
+            // } 
+            alert(`total tarif parkir anda adalah ${tarif_parkir_total}`)
+
+            ulang = prompt('ulang lagi ? y / n')
+        }while(ulang === 'y')
+    </script>
+</html>
+
+<!-- do while atau perulanga cmasih kurang paham pada aplikasi  -->
+<!-- belum ada alert jika input selain numeric -->

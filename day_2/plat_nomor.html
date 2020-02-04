@@ -1,0 +1,47 @@
+<html>
+    <script>
+        
+        // alert('selamat datang')
+        // plat = prompt('silahkan masukan plat nomor anda')
+        
+        // let nopol = plat.substr(5, 9)
+        // let a = new Date()
+        // console.log(a.getDate())
+
+        // if (nopol == a){
+        //     alert('anda boleh lewat')
+        // }
+        // else{
+        //     alert('anda tidak boleh lewat')
+        // }
+        
+        let a = new Date()
+        let tanggal = a.getDate()
+        let plat_nomor = prompt('masukan plat nomor')
+        plat_nomor = plat_nomor.substr(5,1)
+
+        if(tanggal % 2 == 0){
+            tanggal = 'genap'
+        }
+        else{
+            tanggal = 'ganjil'
+        }
+
+        if(plat_nomor % 2 == 0){
+            plat_nomor = 'genap'
+        }
+        else{
+            plat_nomor = 'ganjil'
+        }
+
+        if(tanggal == plat_nomor){
+            alert('kendaraan boleh lewat')
+        }
+        else{
+            alert('tidak boleh lewat')
+        }
+    
+
+    </script>
+
+</html>

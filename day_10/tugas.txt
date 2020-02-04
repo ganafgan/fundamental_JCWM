@@ -1,0 +1,31 @@
+//COUNT THE VOWEL //
+const countVowel = (kalimat='') =>{
+
+    const vowel = ['a','i','u','e','o']
+
+    let total = 0
+
+    for (let i = 0; i < kalimat.length; i++) {
+           if (vowel.includes(kalimat[i])) {
+               total ++
+           }    
+    }
+    return total
+}
+
+// console.log(countVowel('budi pergi ke pasar'))
+// console.log(countVowel('purwadhika'))
+
+
+
+//ASCENDING ORDER//
+
+const ascendingOrder = (angka=[]) => {
+
+    let new_array = [] 
+    for (let i = 0; i < angka.length; i++) {
+        new_array.push(angka[i])
+    }
+}
+
+//BELUM SELESAI//

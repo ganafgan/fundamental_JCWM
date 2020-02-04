@@ -1,0 +1,148 @@
+<html>
+    <script>
+        
+var nama_buah = ['apel', 'anggur', 'jeruk']
+
+var harga_buah =  [10000, 15000, 20000]
+
+var stock_buah = [5, 7, 8]
+
+var cek = false
+
+        pilih_user = prompt(`silahkan pilih pengguna :
+        1. Penjual
+        2. Pembeli`)
+
+        if (pilih_user == '1'){
+
+                pilihan_penjual = prompt(`Daftar Menu\n
+                1. Liat
+                2. Tambah 
+                3. Hapus
+                4. Edit`)
+
+                    if (pilihan_penjual == '1'){
+                           var text = 'Daftar Buah\n'
+                            for (var i = 0 ; i < nama_buah.length ; i ++){
+                                text += (i+1) + '. ' + nama_buah[i] +' harganya Rp.'+ harga_buah[i] + ' stok nya ' + stock_buah[i] + '\n'
+                            }
+
+                            alert(text)
+                        } 
+
+                        else if (pilihan_penjual == '2'){
+                            var buah_baru = prompt('Masukan Nama Buah')
+                            nama_buah.push(buah_baru)
+                            var harga_baru = prompt('Masukan Harga Buah')
+                            harga_buah.push(harga_baru)
+                            var stok_baru = prompt('Masukan Stok Buah')
+                            stock_buah.push(stok_baru)
+
+                            var text = 'Daftar Buah\n'
+                            for (var i = 0 ; i < nama_buah.length ; i ++){
+                                text += (i+1) + '. ' + nama_buah[i] +' harganya Rp.'+ harga_buah[i] + ' stok nya ' + stock_buah[i] + '\n'
+                            }
+
+                            alert(text)
+                           
+                        }
+
+                        else if (pilihan_penjual == '3'){
+                            var text = 'Daftar Buah\n'
+                            for(var i = 0 ; i < nama_buah.length; i++){
+                                text += (i + 1) + '. ' + nama_buah[i] + '\n'
+                            }
+                            text += 'Pilih Buah Yang Mau Di Hapus ???'
+
+                            var pilih_hapus = prompt(text)
+                            pilih_hapus = pilih_hapus - 1
+                                if(pilih_hapus >= 0 && pilih_hapus < nama_buah.length){
+                                    var yakin = prompt('Apakah Yakin Akan Di Hapus ?' + nama_buah[pilih_hapus] + '(y / n)')
+                                        if(yakin == 'y'){
+                                            nama_buah.splice(pilih_hapus, 1)
+                                            alert('Berhasil Dihapus')
+                                        }
+
+                                        else{
+                                            alert('Tidak Jadi Dihapus')
+                                        }
+                                }
+                                else{
+                                    alert('Anda Salah Input')
+                                }
+                                    var text = 'Daftar Buah\n'
+                                        for (var i = 0 ; i < nama_buah.length ; i ++){
+                                        text += (i+1) + '. ' + nama_buah[i] +' harganya Rp.'+ harga_buah[i] + ' stok nya ' + stock_buah[i] + '\n'
+                            }
+
+                            alert(text)
+                        }
+
+                        else if (pilihan_penjual == '4'){
+                            var text = 'Daftar Buah \n'
+                            for (var i = 0 ; i < nama_buah.length; i++){
+                                text += (i + 1 + '. ' + nama_buah[i] + '\n')
+                            }
+                            text += 'Pilih Data Buah Yang Mau Di Ubah !!!'
+
+                            var pilih_edit = prompt(text)
+                            pilih_edit = pilih_edit - 1
+                                if (pilih_edit >= 0 && pilih_edit < nama_buah.length) {
+                                    
+                                }
+                        }
+                    }
+
+
+        else if (pilih_user == '2'){
+
+            apel = prompt('Masukan Jumlah Apel (Stok : 5)')  
+                if (apel > stock_buah[0]) {
+                alert('Stok Apel Yg dipesan Melebihi Stok')
+                cek = false
+            }
+    
+            anggur = prompt('Masukan Jumlah Anggur (Stok : 7)')
+                 if (anggur > stock_buah[1]) {
+                alert('Stok Anggur Yg dipesan Melebihi Stok')
+                cek = false
+                }
+    
+            jeruk = prompt('Masukan Jumlah Jeruk (Stok : 8)')
+                if (jeruk > stock_buah[2]) {
+                alert('Stok Jeruk Yg dipesan Melebihi Stok')
+                cek = false
+                 }
+    
+         if  (cek === true) {
+            var total_apel = apel * harga_buah[0]
+            var total_anggur = anggur * harga_buah[1]
+            var total_jeruk = jeruk * harga_buah[2]
+    
+            var total_harga = total_apel + total_anggur + total_jeruk
+    
+        alert(
+          'Detail Belanja \n\n' +
+          'Apel : ' + apel + ' x ' + harga_buah[0] + ' = ' + total_apel + '\n' +
+          'Anggur : ' + anggur + ' x ' + harga_buah[1] + ' = ' + total_anggur + '\n' +
+          'Jeruk : ' + jeruk + ' x ' + harga_buah[2] + ' = ' + total_jeruk + '\n\n' +
+          'Total : ' + total_harga
+        )
+    
+        bayar = prompt('Total tagihan yg harus di bayar : ' + total_harga)
+            if (bayar > total_harga) {
+            kembalian = bayar - total_harga
+             alert('Uang Kembalian anda : ' + kembalian)
+            } else {
+            alert('Uang Anda Kurang')
+             }
+    
+            } else {
+                alert('Salah satu buah stoknya habis')
+            }
+    
+        }
+
+
+</script>
+</html>

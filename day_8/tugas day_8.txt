@@ -1,0 +1,56 @@
+
+    /* ROTATE BY TWO DIGITS [SOAL 1] */ 
+    function rotate(numbers) {
+        numbers = String(numbers).split('')
+        return numbers[2] + numbers [3] + numbers[0] + numbers[1]
+    }
+    // console.log(rotate(1234))
+
+
+
+    /*AREA OFF THE CIRCLE [SOAL 2]*/ 
+    function circle(a) {
+        hasil = a * a
+        luas = Math.PI * hasil
+        return luas
+    }
+    // console.log(circle(12))
+    
+
+
+    /* MERGE TWO DIGITS NUMBERS [SOAL 3]*/
+    function merge(angka1, angka2) {
+    
+        angka1 = String(angka1).split('')
+        angka2 = String(angka2).split('')
+        return angka1[0] + angka2[0] + angka1[1] + angka2[1]
+    }
+    
+    // console.log(merge(34,98))
+
+
+
+    /* REMOVE THE CHARACTER YOU "A" [SOAL 4]*/
+    function removeCharacter(kata, huruf) {
+        var hasil = ''
+            for(var i = 0 ; i < kata.length ; i++){
+
+                if (kata[i].toLowerCase() == huruf){
+                    
+                }
+
+                else{
+                    hasil += kata[i]
+                }
+           
+    }
+    return hasil
+}
+    // console.log(removeCharacter('saya siswa','s'))
+
+
+    /*REVERSE THE STRING [SOAL 5]*/
+    function reverseTheString(a) {
+        return a.split(' ').reverse().join(' ')
+    }
+    // console.log(reverseTheString('makan hati'))

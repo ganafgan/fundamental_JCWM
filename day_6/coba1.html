@@ -1,0 +1,20 @@
+<script>
+    var data_murid = ['afgan', 'muslim', 'giran']
+
+    var text = 'Daftar Murid \n'
+
+    for (var i = 0; i < data_murid.length; i++) {
+        text += (i + 1) + '. ' + data_murid[i] + '\n'
+    }
+
+    alert(text)
+
+    var murid_baru = prompt('Tambahkan Murid Baru')
+    data_murid.push(murid_baru)
+
+    var text = 'Data Murid \n'
+    for (var i = 0; i < data_murid.length; i++) {
+        text += (i + 1) + '. ' + data_murid[i] + '\n'
+    }
+    alert(text)
+</script>

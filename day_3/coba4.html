@@ -1,0 +1,72 @@
+<html>
+    <script>
+        var harga_apel = 10000
+        var harga_anggur = 15000
+        var harga_orange = 20000
+
+        var stok_apel = 5
+        var stok_anggur = 7
+        var stok_orange = 8
+
+        alert('selamat datang !!!')
+
+        do{
+            apel = prompt('masukan jumlah apel nya :')
+            alert('stok apel nya kurang !!!')
+        }while(apel >= stok_apel)
+
+    
+         
+
+        anggur = prompt('masukan jumlah anggur nya :')
+        while (anggur >= stok_anggur){
+            alert('stok anggur nya kurang !!!')
+            anggur = prompt('masukan jumlah anggur nya :')
+        }
+    
+           
+        orange = prompt('masukan jumlah orange nya :')
+        while (orange >= stok_orange){
+            alert('stok apel nya orange !!!')
+            orange = prompt('masukan jumlah orange nya :')
+        }
+        
+        var total_apel = apel * harga_apel
+        var total_anggur = anggur * harga_anggur
+        var total_orange = orange * harga_orange
+         
+        var total_harga = total_apel + total_anggur + total_orange
+
+        alert(`detail belan nya :
+
+        apel    : ${apel}   x ${harga_apel}   = ${total_apel}
+        anggur  : ${anggur} x ${harga_anggur} = ${total_anggur}
+        apel    : ${orange} x ${harga_apel}   = ${total_orange}
+
+        total semuanya adalah ${total_harga}
+        `)
+        // alert('detail belanja nya :' + '\n' +
+        //         'apel : ' + apel + " x " + harga_apel + ' = ' + total_apel + '\n' +
+        //         'anggur : ' + anggur + " x " + harga_anggur + ' = ' + total_anggur + '\n' +
+        //         'apel : ' + orange + " x " + harga_orange + ' = ' + total_orange + '\n' +
+        //         '\n' +
+        //         'total semuanya ' + total_harga)
+
+         uang = prompt('masukan jumlah uang anda')
+         kembalian = uang - total_harga
+
+        //  if (uang >= total_harga){
+        //      alert('kembalian anda sejumlah ' + kembalian + ' terimakasih ')
+        //  }
+
+        if(uang > total_harga){
+                alert(`uang kembalian anda adalah ${kembalian}`)
+        }    
+         while(uang <= total_harga){
+             alert('uang yang anda masukan kurang !!!')
+             uang = prompt('masukan jumlah uang yg benar')
+             
+         }
+         
+    </script>
+</html>

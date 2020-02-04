@@ -1,0 +1,33 @@
+<html>
+<script>
+    alert('selamat datang')
+
+    pertama = prompt('masukan angka pertama')
+    pertama = Number(pertama)
+    kedua = prompt('masukan angka kedua')
+    kedua = Number(kedua)
+    hasil = 0
+
+    alert('input operator nya')
+    pilihan = prompt(' (+)tambah \n (-)kurang \n (x)kali \n (:)bagi \n (%)modulus')
+
+    if (pilihan == '+' || pilihan == 'tambah') {
+        hasil = pertama + kedua
+    }
+    else if (pilihan == '-' || pilihan == 'kurang') {
+        hasil = pertama - kedua
+    }
+    else if (pilihan == '*' || pilihan == 'kali') {
+        hasil = pertama * kedua
+    }
+    else if (pilihan == '/' || pilihan == 'bagi') {
+        hasil = pertama / kedua
+    }
+    else if (pilihan == '%' || pilihan == 'modulus') {
+        hasil = pertama % kedua
+    }
+
+    alert('hasil nya adalah ' + hasil)
+</script>
+
+</html>

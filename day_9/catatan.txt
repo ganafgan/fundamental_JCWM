@@ -1,0 +1,4 @@
+dari string ke array pake fungsi split()
+dari array ke string pake fungsi join()
+yang punya reverse itu array
+break == keluar dari looping terdekat

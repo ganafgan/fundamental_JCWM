@@ -1,0 +1,10 @@
+let str = ''
+function removeVocal(str) {
+  return str.replace(/['aiueoAIUEO']/gi,'')
+  
+}
+
+console.log(removeVocal('afgan taufiq hidayat'))
+console.log(removeVocal('susi susanti'))
+console.log(removeVocal('rahmat hidayat'))
+console.log(removeVocal('aldiansyah surahmanto'))

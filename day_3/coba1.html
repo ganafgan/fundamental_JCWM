@@ -1,0 +1,33 @@
+<html>
+    <script>
+        alert('aplikasi hitung luas bagun datar')
+        
+        let pilih
+        pilih = prompt('silahkan pilih perhitungan nya  ' + '\n' + '1. persegi' + '\n' + '2. persegi panjang' + '\n' + '3. segitiga')
+
+          
+        if(pilih == '1' || pilih == 'persegi'){
+            angka1 = prompt('masukan angka 1')
+            angka2 = prompt('masukan angka 2')
+            alert('luas = ' + angka1 * angka2)
+        } 
+
+        else if(pilih == '2' || pilih == 'persegi panjang'){
+            panjang = prompt('masukan panjang nya')
+            lebar = prompt('masukan panjang nya')
+            alert('luas = ' + panjang * lebar)
+        
+        } 
+
+        else if(pilih == '3' || pilih == 'segitiga'){
+            alas = prompt('masukan alas nya')
+            tinggi = prompt('masukan tinggi nya')
+            alert('luas =' + (alas * tinggi) / 2 )
+            
+        } 
+        else{
+            alert('menu yang anda input salah')
+        }
+    </script>
+
+</html>

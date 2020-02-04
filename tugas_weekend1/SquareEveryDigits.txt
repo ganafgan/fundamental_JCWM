@@ -1,0 +1,10 @@
+function squareEveryDigits(number) {
+
+    return +Array.from(number.toString(), x => x * x).join('')
+    
+}
+
+console.log(squareEveryDigits(567))
+console.log(squareEveryDigits(789))
+console.log(squareEveryDigits(123))
+console.log(squareEveryDigits(456))
