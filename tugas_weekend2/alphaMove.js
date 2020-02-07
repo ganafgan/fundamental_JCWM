@@ -1,14 +1,35 @@
 let alphaMove = (kalimat='',move=0) => {
 
-    let hasil =''
+    let total = 0
+    let huruf = ' abcdefghijklmnopqrstuvwxyz'
+    index_1 = []
+    index_2 = []
+    print = ''
+
+    // for (let i = 0; i < kalimat.length; i++) {
+    //     hasil += String.fromCharCode(kalimat.charCodeAt(i) + move)
+        
+    // }
 
     for (let i = 0; i < kalimat.length; i++) {
-        hasil += String.fromCharCode(kalimat.charCodeAt(i) + move)
+            var hasil = huruf.indexOf(kalimat[i])
+            index_1.push(hasil)
         
     }
-    return hasil
+
+    for (let i = 0; i < index_1.length; i++) {
+            index_2.push(index_1[i] + move)
+        
+    }
+
+    for (let i = 0; i < index_2.length; i++) {
+        print += huruf[index_2[i]]
+        
+    }
+
+    console.log(index_1)
+    console.log(index_2)
+    console.log(print)
 }
 
-console.log(alphaMove('abc',1))
-console.log(alphaMove('abc',2))
-console.log(alphaMove('aaa',5))
+alphaMove('abc',1)

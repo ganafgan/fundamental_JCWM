@@ -1,0 +1,8 @@
+const fungsiDecoder = (str='') => {
+    
+    arrStr = str.split('wub').join(' ')
+
+    console.log(arrStr)
+}
+
+fungsiDecoder('wubwewubarewubthewubchampionwubmywubfriend')

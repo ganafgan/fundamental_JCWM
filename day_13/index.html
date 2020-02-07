@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <p id="ini_id">Hello Ini Tag P</p>
+            <input id="nama" type="text" placeholder="Masukan Nama Anda"><br><br>
+
+            <button class="klik">Klik Me</button>
+            <!-- <button id="button_2" class="klik">Klik Me</button>
+            <button class="klik">Klik Me</button>     -->
+        </center>
+        <script>
+            const onClickBtn = () => {
+                let value = document.getElementById('nama').value
+                let el_p = document.getElementById('ini_id')
+                el_p.innerHTML = 'Selamat datang ' +  value
+            }
+            // let ubahP = () => {
+            //     document.getElementById('ini_id').innerHTML = 'Fikri'   
+            // }
+
+            document.getElementsByClassName('klik')[0].addEventListener("click", onClickBtn)
+        </script>
+    </body>
+</html>

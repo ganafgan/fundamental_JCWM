@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <input type="number" id="angka1" placeholder="angka 1">
+        <input type="number" id="angka2" placeholder="angka 2">
+        <button>Jumlahkan</button>
+        <h3>Hasilnya Adalah = </h3>
+    </center>
+    <script>
+        const JumlahkanClick = () => {
+            var angka1 = document.getElementById('angka1').value
+            var angka2 = document.getElementById('angka2').value
+            var el_h3 = document.getElementsByTagName('h3')[0]
+
+            var hasil = 'Hasil nya adalah ' + ( Number(angka1) + Number(angka2))
+
+            if (angka1 == '' || angka2 == '') {
+               el_h3.innerHTML = 'Form Tidak Boleh Kosong'
+               el_h3.style = 'color:red ; font-size:40px'
+                
+            }else{
+                document.getElementsByTagName('h3')[0].innerHTML = hasil
+            }
+            
+        }
+        document.getElementsByTagName('button')[0].addEventListener('click', JumlahkanClick)
+    </script>
+</body>
+</html>

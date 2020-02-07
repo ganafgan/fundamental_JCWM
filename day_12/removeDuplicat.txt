@@ -1,0 +1,13 @@
+const removeDuplicates = (kata='') => {
+    new_kata = kata.split(' ')
+    let kata_baru = []
+   
+    for (let i = 0; i < new_kata.length; i++) {
+       if (kata_baru.indexOf(new_kata[i]) === -1) { //catatan indexOf kalau sama/true -1 || indexOf kalau beda/false 0
+           kata_baru.push(new_kata[i])
+       }
+        
+    }
+    return kata_baru
+}
+console.log(removeDuplicates('alpha beta beta gamma gamma'))
