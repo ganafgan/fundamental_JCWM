@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <center>
+        <h1>Program Pencarian Karakter</h1>
+        <p>Ketikan Kalimat</p>
+        <input type="text" id="input" placeholder="masukan kalimat nya">
+        <p>Karakter Yang Di Cari</p>
+        <input type="text" id="karakter" placeholder="masukan karakter nya"><br><br>
+        <button id="cari" onclick="jumlahHuruf()">CARI</button>
+        <p id="hasil"></p>
+    </center>
+    <script>
+
+        const jumlahHuruf = () => {
+            var input= document.getElementById('input').value
+            var karakter = document.getElementById('karakter').value
+            var jumlah = 0
+
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] == karakter) {
+                    jumlah ++
+                }   
+            }
+            var print = `Jumlah '${karakter}' sebanyak ${jumlah} buah`
+            document.getElementById('hasil').innerHTML = print
+        }
+    </script>
+
+</body>
+</html>

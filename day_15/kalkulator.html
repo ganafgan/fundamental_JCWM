@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <center>
+        <h2>Calculator Sederhana</h2> 
+        <p>Masukan Angka 1 <input type="text" id="angka1" placeholder="masukan angka 1"></p>
+        <p>Masukan Angka 2 <input type="text" id="angka2" placeholder="masukan angka 1"></p><br><br>
+        <button id="kali" onclick="kali()">kali x</button>
+        <button id="bagi" onclick="bagi()">bagi :</button>
+        <button id="tambah" onclick="tambah()">tambah +</button>
+        <button id="kurang" onclick="kurang()">kurang -</button><br><br>
+        <button id="modulus" onclick="modulus()">modulus %</button>
+        <button id="pangkat" onclick="pangkat()">pangkat ^</button>
+        <p id="hasil"></p>
+    </center>
+    <script>
+        const tambah = () => {
+            var angka1 = document.getElementById('angka1').value
+            var angka2 = document.getElementById('angka2').value
+            var print = `${angka1} + ${angka2} = ${Number(angka1) + Number(angka2)}`  
+            document.getElementById('hasil').innerHTML = print
+        }
+
+        const kali = () => {
+            var angka1 = document.getElementById('angka1').value
+            var angka2 = document.getElementById('angka2').value
+            var print = `${angka1} x ${angka2} = ${Number(angka1) * Number(angka2)}`
+            document.getElementById('hasil').innerHTML = print
+
+        }
+
+        const bagi = () => {
+            var angka1 = document.getElementById('angka1').value
+            var angka2 = document.getElementById('angka2').value
+            var print = `${angka1} : ${angka2} = ${Number(angka1) / Number(angka2)}`
+            document.getElementById('hasil').innerHTML = print
+
+        }
+
+        const kurang = () => {
+            var angka1 = document.getElementById('angka1').value
+            var angka2 = document.getElementById('angka2').value
+            var print = `${angka1} - ${angka2} = ${Number(angka1) - Number(angka2)}`
+            document.getElementById('hasil').innerHTML = print
+        }
+
+        const modulus = () => {
+            var angka1 = document.getElementById('angka1').value
+            var angka2 = document.getElementById('angka2').value
+            var print = `${angka1} % ${angka2} = ${Number(angka1) % Number(angka2)}`
+            document.getElementById('hasil').innerHTML = print
+        }
+
+        const pangkat = () => {
+            var angka1 = document.getElementById('angka1').value
+            var angka2 = document.getElementById('angka2').value
+            var pangkat = parseInt(angka1) ^ parseInt(angka2)
+            var print = `${angka1} ^ ${angka2} = ${Math.pow(Number(angka1),Number(angka2))}`
+            document.getElementById('hasil').innerHTML = print
+        }
+
+
+    </script>
+</body>
+</html>

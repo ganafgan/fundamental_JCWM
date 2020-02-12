@@ -29,6 +29,7 @@
                 <tbody id="show">
                     
                 </tbody>
+                <h3 id="peringatan"></h3>
             </table>
         </center>
         <script>
@@ -50,7 +51,7 @@
                 }
                 document.getElementById('show').innerHTML = print
             }
-
+            
             let onAddDataClick = () => {
                 //ambil value dari inputan
                 var no = document.getElementById('nomor').value
@@ -58,16 +59,30 @@
                 var gender = document.getElementById('gender').value
                 var pekerjaan = document.getElementById('pekerjaan').value
                 //bikin object dari value inputan
-                var new_data = {
-                    no : no,
-                    nama : nama,
-                    gender : gender,
-                    pekerjaan : pekerjaan
+                
+                if (nama == '' || no == '' || gender == '' || pekerjaan == '') {
+                    document.getElementById('peringatan').innerHTML = 'Form Tidak Boleh Kosong'
+                    document.getElementById('peringatan').style = 'color:red; font-size:40PX'
+                }else {
+                    
+                    var new_data = {
+                        no : no,
+                        nama : nama,
+                        gender : gender,
+                        pekerjaan : pekerjaan
+                    }
+                    data.push(new_data)
+                    document.getElementById('peringatan').innerHTML = ''
+                    document.getElementById('nomor').value = ''
+                    document.getElementById('nama').value = ''
+                    document.getElementById('gender').value = ''
+                    document.getElementById('pekerjaan').value = ''
+                    
+                    //print ulang
+                    printData()
+
                 }
                 //object di push ke dalam arrar data
-                data.push(new_data)
-                //print ulang
-                printData()
             }
             printData()
 
