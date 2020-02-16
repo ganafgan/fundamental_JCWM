@@ -16,7 +16,7 @@ const passwordStrengh = (str='') => {
     // }
 
     for (let i = 0; i < str.length; i++) {
-        if (str.includes(newNum[i])) {
+        if (str.includes(num.charAt()) && str[i].toUpperCase) {
             text = `strong`
         }else{
             text = `weak`
@@ -29,6 +29,6 @@ const passwordStrengh = (str='') => {
 
 passwordStrengh('fikriii')
 // passwordStrengh('fikriiF12')
-passwordStrengh('Afgan1')
+passwordStrengh('Afgan10')
 
 

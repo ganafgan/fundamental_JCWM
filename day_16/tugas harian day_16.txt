@@ -1,0 +1,91 @@
+const findSort = (str='') => {
+
+    let arrStr = str.split(' ')
+    let newArrStr = []
+
+    for (let i = 0; i < arrStr.length; i++) {
+        newArrStr.push(arrStr[i].length)
+    }
+
+    var result = newArrStr.sort(function(a,b){return a-b})
+    
+    console.log(`jumlah kata terpendak adalah ${result[0]}`)
+}
+
+findSort('Many people get up early in the morining')
+findSort('Every office would getiing newest monitor')
+findSort('Create new file after this morning')
+
+================================================================
+
+const persistence = (num=0) => {
+
+    // var times = 0
+    // var arr = num.toString().split('')
+    // var hasil = ''
+
+    // for (let i = 0; i < num.length; i++) {
+    //         hasil = arr.reduce(function(a,b){return a*b})
+    //         times ++     
+            
+    // }
+    // console.log(hasil)
+    // var arr = num.toString().split('')
+    var times = 0
+    num = num.toString()
+    while (num.length > 1) {
+        times++
+        num = num.split('').map(Number).reduce(function(a,b){return a *b}).toString()
+    }
+    console.log(times)
+}
+
+persistence(39)
+persistence(999)
+persistence(4)
+
+===================================================================================
+
+const Multiplication = (col=0,row=0) => {
+
+    // var angka1 = 1
+    var text = ''
+
+    for (let i = 1; i <= col ; i++) {
+        for (let j = 1; j <= row; j++) {
+            text += (j * i) + ' '
+        }
+        text += '\n'        
+    }
+    console.log(text)
+}
+
+Multiplication(3,3)
+Multiplication(5,3)
+Multiplication(3,5)
+
+===================================================================================
+
+const urutanAlphabet = (str='') => {
+
+    var char = " abcdefghijklmnopqrstuvwxyz"
+    // console.log(arrChar)
+    var index = []
+
+    
+
+    for (let i = 0; i < str.length; i++) {
+            if (!(str[i] >= 0)) {
+                var hasil = char.indexOf(str[i].toLowerCase())
+                if (hasil !== -1) {
+                    index.push(hasil)
+                }
+            }
+        
+        }
+        console.log(index.join(' '))
+}
+
+urutanAlphabet("The sunset sets at twelve o'clock")
+// console.logurutanAlphabet("it's never too let to try")
+// console.logurutanAlphabet("Have you done your homework ?")

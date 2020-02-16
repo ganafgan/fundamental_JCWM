@@ -11,4 +11,4 @@ const name = (str='',char='') => {
 
 }
 
-name(['fikri','fendi','indri,','nana'],'nana')
+name(['fikri','fendi','indri,','nana'],'na')

@@ -1,0 +1,13 @@
+class Persist {
+  public static int persistence(long n) {
+        long m = 1; 
+        long r = n;
+        if (r / 10 == 0) {
+            return 0;
+        } else {
+            for (r = n;r != 0;r = r/10)
+                m = m * (r % 10);
+            return persistence(m) + 1;
+        }
+    }
+}

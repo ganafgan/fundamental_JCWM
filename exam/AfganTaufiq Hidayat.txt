@@ -1,0 +1,104 @@
+const sumOdd = (num=0) => {
+
+    num = String(num)
+    hasil = 0
+
+    // var result = Number(num[0]) + Number(num[2]) + Number(num[4])
+
+    for (let i = 0; i < num.length; i++) {
+        hasil += Number(num[i++])
+    
+    }
+    console.log(hasil)
+    // console.log(result)
+}
+sumOdd(540395)
+sumOdd(356083)
+sumOdd(123)
+
+
+==================================================================================
+const findUniqChar = (str='') => {
+        var huruf = []
+        var jumlahHuruf = []
+        var display = []
+    
+        for (let i = 0; i < str.length; i++) {
+            if (huruf.includes(str[i])) {
+                var index_huruf = huruf.indexOf(str[i])
+                jumlahHuruf[index_huruf] ++
+            }else
+                huruf.push(str[i])
+                jumlahHuruf.push(1)
+        }
+
+        
+        for (let i = 0; i < jumlahHuruf.length; i++) {
+            if (jumlahHuruf[i] == 1) {
+                display.push(huruf[i])
+            }
+            
+        }
+        
+        return display.join('')
+
+    }
+
+    console.log(findUniqChar('budi pergi ke pasar'))
+    console.log(findUniqChar('fikri'))
+
+==================================================================================
+const sumOnlyNum = (str='') => {
+    str = str.split('')
+    var huruf = 'abcdefghijklmnoqprstuvwxyz'.split('')
+    hasil = 0
+    angka = []
+
+    for (let i = 0; i < str.length; i++) {
+        if (huruf.includes(str[i])) {
+
+        }else{
+            angka.push(str[i])
+        }
+        
+    }
+
+    for (let i = 0; i < angka.length; i++) {
+        hasil += Number(angka[i])    
+    }
+    
+    console.log(hasil)
+}
+
+sumOnlyNum('hello123')
+sumOnlyNum('ak1u4h')
+sumOnlyNum('siap86')
+
+====================================================================
+const spacify = (str='') => {
+    str = str.split('').join(' ')
+    console.log(str)
+}
+
+spacify('hello')
+spacify('im studen at purwadhika')
+
+
+====================================================================
+
+const concatMidle = (str='') => {
+    str = str.split(' ')
+    console.log(str)
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].length % 2 == 0) {
+           var hasil = str[i].length/2-1 + str[i].length/2
+        }else{
+            var hasil = Math.round(str[i].length/2)
+        }
+        
+    }
+    console.log(hasil)
+}
+
+concatMidle('hello world')

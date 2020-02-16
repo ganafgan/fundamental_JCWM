@@ -4,3 +4,24 @@ sort()	: arr.sort(function(a,b){return a-b})
 filter() : ((a,b)=> str.indexOf(a)===b)
 sum(): arr.reduce(function(a,b){return a+b})
 sum(): arr.reduce(function(a,b){return a+b})/arr.length
+
+splice fungsi array untuk menghapus isi di dalam array contoh => arr.splice(1,1)
+arr = [[1],[2,3],[4,5,6]]
+artinya yg terhapus isi array [2,3] karena menghapus array index ke 1 dan jumlah element
+yg akan di hapus
+
+includes atau indexOff
+kata sebelah kiri harus data yg sudah di deklarasikan
+
+
+
+
+
+git add .
+git commit -m "masukan penanda nya"
+git push origin master
+
+klo error masukan perintah => git pull
+
+cerdascom
+pwdk1234
