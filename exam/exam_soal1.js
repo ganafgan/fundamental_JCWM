@@ -5,8 +5,8 @@ const sumOdd = (num=0) => {
 
     // var result = Number(num[0]) + Number(num[2]) + Number(num[4])
 
-    for (let i = 0; i < num.length; i++) {
-        hasil += Number(num[i++])
+    for (let i = 0; i < num.length; i+=2) {
+        hasil += Number(num[i])
     
     }
     console.log(hasil)
